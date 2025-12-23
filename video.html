@@ -1,40 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Watch Video</title>
+  <title>Video Page</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="center black-bg">
 
-  <video id="mainVideo" autoplay controls playsinline>
-    <source src="video.mp4" type="video/mp4">
-  </video>
+  <div class="video-container">
+    <video id="myVideo" autoplay>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
 
-  <div id="actions">
-    <a href="video.mp4" download>
-      <button>DOWNLOAD</button>
-    </a>
-    <button onclick="replay()">REPLAY</button>
+    <div id="controls" class="hidden">
+      <button onclick="replayVideo()">Replay</button>
+      <a href="video.mp4" download>
+        <button>Download</button>
+      </a>
+    </div>
   </div>
 
-  <script>
-    const video = document.getElementById("mainVideo");
-    const actions = document.getElementById("actions");
-
-    actions.style.display = "none";
-
-    video.onended = () => {
-      actions.style.display = "flex";
-    };
-
-    function replay() {
-      actions.style.display = "none";
-      video.currentTime = 0;
-      video.play();
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
