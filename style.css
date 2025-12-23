@@ -1,62 +1,47 @@
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* IMPORTANT FIX */
-html, body {
-  width: 100%;
-  height: 100%;
-  background: black;
-  overflow: hidden;
+  height: 100vh;
   font-family: Arial, sans-serif;
 }
 
-/* FULLSCREEN VIDEO */
-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  background: black;
+.black-bg {
+  background-color: black;
 }
 
-/* CONTINUE BUTTON */
-#continueBtn {
-  position: fixed;
-  bottom: 12%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 18px 60px;
-  font-size: 22px;
-  font-weight: bold;
-  background: white;
-  color: black;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* DOWNLOAD + REPLAY */
-#actions {
-  position: fixed;
-  bottom: 10%;
-  width: 100%;
+.center {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
 }
 
-#actions button {
-  padding: 15px 35px;
-  font-size: 18px;
-  font-weight: bold;
-  background: white;
+.continue-btn {
+  background-color: white;
   color: black;
+  padding: 15px 40px;
+  font-size: 18px;
   border: none;
-  border-radius: 8px;
   cursor: pointer;
+}
+
+.video-container {
+  text-align: center;
+}
+
+video {
+  width: 90%;
+  max-width: 400px;
+}
+
+#controls {
+  margin-top: 15px;
+}
+
+#controls button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }
