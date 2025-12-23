@@ -1,47 +1,57 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- First Page ---------- */
+body.home {
   height: 100vh;
-  font-family: Arial, sans-serif;
-}
-
-.black-bg {
-  background-color: black;
-}
-
-.center {
+  background: black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .continue-btn {
-  background-color: white;
+  padding: 20px 50px;
+  font-size: 22px;
+  font-weight: bold;
+  background: white;
   color: black;
-  padding: 15px 40px;
-  font-size: 18px;
   border: none;
-  cursor: pointer;
+  border-radius: 8px;
 }
 
-.video-container {
-  text-align: center;
+/* ---------- Video Page ---------- */
+body.video-page {
+  background: black;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 video {
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  background: black;
 }
 
-#controls {
-  margin-top: 15px;
+.controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
 }
 
-#controls button {
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
-}
-
-.hidden {
-  display: none;
+.controls button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 6px;
 }
