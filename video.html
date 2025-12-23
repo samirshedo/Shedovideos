@@ -1,25 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Page</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="center black-bg">
+<body>
 
-  <div class="video-container">
-    <video id="myVideo" autoplay>
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support video.
-    </video>
+  <video id="videoPage" controls autoplay playsinline>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-    <div id="controls" class="hidden">
-      <button onclick="replayVideo()">Replay</button>
-      <a href="video.mp4" download>
-        <button>Download</button>
-      </a>
-    </div>
+  <div class="controls">
+    <a href="video.mp4" download>
+      <button>Download</button>
+    </a>
+    <button onclick="replayVideo()">Replay</button>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const video = document.getElementById('videoPage');
+    const controls = document.querySelector('.controls');
+
+    controls.style.display = 'none'; // hide controls initially
+
+    video.onended = () => {
+      controls.style.display = 'flex'; // show after video ends
+    };
+
+    function replayVideo() {
+      controls.style.display = 'none';
+      video.currentTime = 0;
+      video.play();
+    }
+  </script>
 </body>
 </html>
