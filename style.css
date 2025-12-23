@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.black-bg {
+  background-color: black;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.continue-btn {
+  background-color: white;
+  color: black;
+  padding: 15px 40px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.video-container {
+  text-align: center;
+}
+
+video {
+  width: 90%;
+  max-width: 400px;
+}
+
+#controls {
+  margin-top: 15px;
+}
+
+#controls button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
