@@ -1,32 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shedo Videos</title>
+  <title>Welcome</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="center black-bg">
 
-  <video id="introVideo" autoplay muted playsinline>
-    <source src="video.mp4" type="video/mp4">
-  </video>
-
-  <button id="continueBtn">CONTINUE</button>
+  <button class="continue-btn" onclick="goNext()">
+    CONTINUE
+  </button>
 
   <script>
-    const video = document.getElementById("introVideo");
-    const btn = document.getElementById("continueBtn");
-
-    btn.style.display = "none";
-
-    video.onended = () => {
-      btn.style.display = "block";
-    };
-
-    btn.onclick = () => {
+    function goNext() {
       window.location.href = "video.html";
-    };
+    }
   </script>
 
 </body>
