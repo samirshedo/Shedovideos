@@ -1,57 +1,34 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Reset and base styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: Arial, sans-serif;
 }
 
-/* ---------- First Page ---------- */
-body.home {
-  height: 100vh;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.continue-btn {
-  padding: 20px 50px;
-  font-size: 22px;
-  font-weight: bold;
-  background: white;
-  color: black;
-  border: none;
-  border-radius: 8px;
-}
-
-/* ---------- Video Page ---------- */
-body.video-page {
-  background: black;
-  color: white;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
+/* Video styling */
 video {
-  width: 100%;
-  max-height: 80vh;
-  object-fit: contain;
-  background: black;
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
 }
 
-.controls {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-}
-
-.controls button {
-  padding: 12px 25px;
-  font-size: 16px;
-  background: white;
-  color: black;
-  border: none;
-  border-radius: 6px;
+/* Button styling */
+button {
+    position: absolute;
+    bottom: 50px;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 10;
 }
