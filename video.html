@@ -3,38 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Page</title>
+  <title>Watch Video</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <video id="videoPage" controls autoplay playsinline>
+  <video id="mainVideo" autoplay controls playsinline>
     <source src="video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
 
-  <div class="controls">
+  <div id="actions">
     <a href="video.mp4" download>
-      <button>Download</button>
+      <button>DOWNLOAD</button>
     </a>
-    <button onclick="replayVideo()">Replay</button>
+    <button onclick="replay()">REPLAY</button>
   </div>
 
   <script>
-    const video = document.getElementById('videoPage');
-    const controls = document.querySelector('.controls');
+    const video = document.getElementById("mainVideo");
+    const actions = document.getElementById("actions");
 
-    controls.style.display = 'none'; // hide controls initially
+    actions.style.display = "none";
 
     video.onended = () => {
-      controls.style.display = 'flex'; // show after video ends
+      actions.style.display = "flex";
     };
 
-    function replayVideo() {
-      controls.style.display = 'none';
+    function replay() {
+      actions.style.display = "none";
       video.currentTime = 0;
       video.play();
     }
   </script>
+
 </body>
 </html>
