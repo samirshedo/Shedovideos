@@ -1,59 +1,47 @@
-/* Reset */
-* {
+body {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
-  width: 100%;
-  height: 100%;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100vh;
   font-family: Arial, sans-serif;
 }
 
-/* Video full screen */
-video {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  background: black;
+.black-bg {
+  background-color: black;
 }
 
-/* Continue button */
-#continueBtn {
-  position: absolute;
-  bottom: 50px;
-  padding: 20px 50px;
-  font-size: 22px;
-  font-weight: bold;
-  background: white;
-  color: black;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-/* Video page controls */
-.controls {
-  position: absolute;
-  bottom: 50px;
+.center {
   display: flex;
-  gap: 15px;
   justify-content: center;
-  width: 100%;
+  align-items: center;
 }
 
-.controls button {
-  padding: 15px 30px;
-  font-size: 18px;
-  background: white;
+.continue-btn {
+  background-color: white;
   color: black;
+  padding: 15px 40px;
+  font-size: 18px;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
-    }
+}
+
+.video-container {
+  text-align: center;
+}
+
+video {
+  width: 90%;
+  max-width: 400px;
+}
+
+#controls {
+  margin-top: 15px;
+}
+
+#controls button {
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
